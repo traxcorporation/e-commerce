@@ -1,13 +1,13 @@
 (function($) {
     $(function() {
-      		$('.norme').fSelect({
+      			$('.norme').fSelect({
 				placeholder : 'Select some options',
 				numDisplayed : 3,
 				overflowText : '{n} Norme selectees',
 				searchText : 'Search',
 				showSearch : true
 			});
-			$('.etape').fSelect({
+      			$('.etape').fSelect({
 				placeholder : 'Select some options',
 				numDisplayed : 3,
 				overflowText : '{n} Etapes selectees',

@@ -1,5 +1,7 @@
 package com.trax.eboutique.dao;
-
+/**
+ * @author ytraore
+ */
 import java.io.Serializable;
 
 import javax.persistence.Column;
