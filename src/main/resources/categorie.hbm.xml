@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping >
+	<class name="com.trax.eboutique.entities.Categorie" table="CATEGORIE">
+		<id name="idCategorie" column="CATEGORIE_ID">
+			<generator class="increment"/>
+		</id>
+		<property name="nomCategorie">
+			<column name="NOM_CATEGORIE"></column>
+		</property>
+		<property name="nomPhoto">
+			<column name="NOM_PHOTO"></column>
+		</property>
+		<property name="photo">
+			<column name="PHOTO"></column>
+		</property>
+			<property name="description">
+			<column name="DESCRIPTION"></column>
+		</property>
+	</class>
+</hibernate-mapping>
