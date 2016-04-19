@@ -27,7 +27,7 @@ public class Categorie implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
-	private Long idCategorie;
+	private long idCategorie;
 	@NotEmpty
 	@Size(min = 4, max = 20)
 	private String nomCategorie;
@@ -38,7 +38,7 @@ public class Categorie implements Serializable {
 	@OneToMany(mappedBy = "categorie")
 	private Collection<Produit> produits = new ArrayList<Produit>();
 
-	public Categorie(String nomCategorie, String description, String nomPhoto, Long idCategorie) {
+	public Categorie(String nomCategorie, String description, String nomPhoto, int idCategorie) {
 		this.idCategorie = idCategorie;
 		this.nomCategorie = nomCategorie;
 		this.description = description;
@@ -50,11 +50,11 @@ public class Categorie implements Serializable {
 		super();
 	}
 
-	public Long getIdCategorie() {
+	public long getIdCategorie() {
 		return idCategorie;
 	}
 
-	public void setIdCategorie(Long idCategorie) {
+	public void setIdCategorie(int idCategorie) {
 		this.idCategorie = idCategorie;
 	}
 
@@ -89,5 +89,10 @@ public class Categorie implements Serializable {
 	public void setPhoto(byte[] photo) {
 		this.photo = photo;
 	}
+
+	public void setIdCategorie(long idCategorie) {
+		this.idCategorie = idCategorie;
+	}
+
 
 }

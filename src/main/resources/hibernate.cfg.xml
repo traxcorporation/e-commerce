@@ -1,30 +1,17 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE hibernate-configuration PUBLIC
-  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-		<!-- HIBERNATE -->
-		<!-- Paramètres de la connexion à la base de données -->
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
-		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:8000/traxdev</property>
-		<property name="hibernate.connection.name">root</property>
-		<property name="hibernate.connection.password"></property>
-
-		<!-- Comportement pour la conservation des tables -->
-		<property name="hbm2ddl.auto">create</property>
-	
-		<!-- JDBC Connection tools -->
-		<property name="connection.pool_size">1</property>
-		<!-- Afficher les logs -->
-		<property name="show_sql">true</property>
-		<property name="hibernate.format_sql">true</property>
-		<property name="use_sql_comments">true</property>
-		<property name="hibernate.c3p0.max_statements">50</property>
-		<!-- Fichiers à mapper -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="hibernate.connection.username">TRAXDEV</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.show_sql">true</property>
+		<!--  Mapping -->
 		<mapping resource="UserDetails.hbm.xml"></mapping>
-
+		<mapping resource="categorie.hbm.xml"></mapping>
 	</session-factory>
 </hibernate-configuration>

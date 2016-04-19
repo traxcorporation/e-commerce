@@ -1,14 +1,18 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE hibernate-configuration PUBLIC
-  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-  
-<hibernate-mapping package="com.trax.eboutique.dao">
-	<class name="User" table="user">
-		<id name="userId" type="int" column="USER_ID">
-			<generator class="increment" />
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping >
+	<class name="com.trax.eboutique.dao.UserTest" table="USERTEST">
+		<id name="userID" column="USER_ID">
+			<generator class="increment"/>
 		</id>
-		<property name="userName" />
-			<column name="USER_NAME" type="String"></column>
+		<property name="userName">
+			<column name="USER_NAME"></column>
+		</property>
+		<property name="userMessage">
+			<column name="USER_MESSAGE"></column>
+		</property>
 	</class>
 </hibernate-mapping>

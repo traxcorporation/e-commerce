@@ -63,4 +63,9 @@ public class LigneCommande implements Serializable {
 	public void setPrix(double prix) {
 		this.prix = prix;
 	}
+
+	public void setProduit(Produit produit) {
+		this.produit = produit;
+		
+	}
 }

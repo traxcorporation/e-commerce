@@ -5,7 +5,10 @@ package com.trax.eboutique.dao;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.hibernate.annotations.Entity;
 
 /**
@@ -13,18 +16,18 @@ import org.hibernate.annotations.Entity;
  * @author ytraore
  *
  */
-@Entity
-public class User implements Serializable {
+@Entity  
+@Table 
+public class UserTest implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	@Id
+	  @Id  
+	  @GeneratedValue
 	private int userID;
-	@Column(name = "User_Name")
 	private String userName;
-
 	private String userMessage;
 
 	public int getUserID() {

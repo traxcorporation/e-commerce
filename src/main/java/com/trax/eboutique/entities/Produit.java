@@ -18,7 +18,7 @@ public class Produit implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
-	private Long idProduit;
+	private long idProduit;
 	@NotEmpty
 	private String designation;
 	private String description;
@@ -83,4 +83,13 @@ public class Produit implements Serializable {
 		this.selectionne = selectionne;
 	}
 
+	public long getIdProduit() {
+		return idProduit;
+	}
+
+	public void setIdProduit(long idProduit) {
+		this.idProduit = idProduit;
+	}
+
+	
 }
